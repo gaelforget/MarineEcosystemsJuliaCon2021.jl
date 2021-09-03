@@ -80,24 +80,6 @@ One cell at a time, for each of the three code cells below :
 4) analyze what's happened to the plot and workflow record
 """
 
-# ╔═╡ 1a9237f4-c1b4-49e1-b3a8-ba7a433cc313
-begin
-	lock1=false
-	#lock1=rerun1(exps[iexp]) #may take O(30sec)
-end
-
-# ╔═╡ 62bac52e-9f0f-4ee7-9da4-307326f74842
-begin
-	lock2=false
-	#lock2=rerun2(exps[iexp]) #may take O(10min)
-end
-
-# ╔═╡ 6f9c2d22-819b-4001-86cd-b33086a34db6
-begin
-	lock3=false
-	#lock3=rerun3(exps[iexp]) #may take O(10min)
-end
-
 # ╔═╡ c95673c6-7aea-4ce1-b135-91073749ea4c
 md"""## Appendices"""
 
@@ -181,6 +163,12 @@ function rerun3(myexp)
 	return true
 end
 
+# ╔═╡ 6f9c2d22-819b-4001-86cd-b33086a34db6
+begin
+	lock3=false
+	lock3=rerun3(exps[iexp]) #may take O(10min)
+end
+
 # ╔═╡ a4db0102-33fb-49c3-92f7-66dacb9d4e07
 function rerun2(myexp)
 	# change model run duration 
@@ -204,6 +192,12 @@ function rerun2(myexp)
 	git_log_fil(myexp,fil,"output file from run2")
 
 	return true
+end
+
+# ╔═╡ 62bac52e-9f0f-4ee7-9da4-307326f74842
+begin
+	lock2=false
+	lock2=rerun2(exps[iexp]) #may take O(10min)
 end
 
 # ╔═╡ db8cc4ec-28a6-4121-a1c0-62701aa4e9f8
@@ -266,6 +260,12 @@ function rerun1(myexp)
 
 	return true
 
+end
+
+# ╔═╡ 1a9237f4-c1b4-49e1-b3a8-ba7a433cc313
+begin
+	lock1=false
+	lock1=rerun1(exps[iexp]) #may take O(30sec)
 end
 
 # ╔═╡ a8263dde-4cde-4da1-8108-0135af254965
@@ -1374,6 +1374,7 @@ version = "0.9.1+5"
 # ╟─6ef93b0e-859f-11eb-1b3b-d76b26d678dc
 # ╟─9aeaf058-d8c1-4e42-b5a7-8038ebf50d5a
 # ╟─42a34a31-4b49-4d0e-81a7-6bde2b1f514d
+# ╟─f199ba18-ebe7-4d5d-b682-64969ef5ef92
 # ╟─7fa8a460-89d4-11eb-19bb-bbacdd32719a
 # ╟─1f3096d3-ca68-4a71-9411-fe3b201cf5a9
 # ╟─8420675b-1a1b-4f3d-bf81-874ce4813a37
@@ -1389,11 +1390,10 @@ version = "0.9.1+5"
 # ╟─cab5152e-3c4b-47ab-937a-f084323267c5
 # ╟─1a9237f4-c1b4-49e1-b3a8-ba7a433cc313
 # ╟─62bac52e-9f0f-4ee7-9da4-307326f74842
-# ╟─6f9c2d22-819b-4001-86cd-b33086a34db6
+# ╠═6f9c2d22-819b-4001-86cd-b33086a34db6
 # ╟─c95673c6-7aea-4ce1-b135-91073749ea4c
-# ╟─f199ba18-ebe7-4d5d-b682-64969ef5ef92
 # ╟─8cf4d8ca-84eb-11eb-22d2-255ce7237090
-# ╟─0d2237c1-c26c-4f5b-86ca-4682a6ab2d8a
+# ╠═0d2237c1-c26c-4f5b-86ca-4682a6ab2d8a
 # ╟─a4db0102-33fb-49c3-92f7-66dacb9d4e07
 # ╟─db8cc4ec-28a6-4121-a1c0-62701aa4e9f8
 # ╟─a8263dde-4cde-4da1-8108-0135af254965

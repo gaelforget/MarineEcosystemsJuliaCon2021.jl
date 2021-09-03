@@ -831,7 +831,7 @@ uuid = "d3d80556-e9d4-5f37-9878-2ab0fcc64255"
 version = "7.1.1"
 
 [[LinearAlgebra]]
-deps = ["Libdl"]
+deps = ["Libdl", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[LogExpFunctions]]
@@ -981,6 +981,10 @@ deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
 git-tree-sha1 = "7937eda4681660b4d6aeeecc2f7e1c81c8ee4e2f"
 uuid = "e7412a2a-1a6e-54c0-be00-318e2571c051"
 version = "1.3.5+0"
+
+[[OpenBLAS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
+uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
 
 [[OpenSSL_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1551,6 +1555,10 @@ git-tree-sha1 = "acc685bcf777b2202a904cdcb49ad34c2fa1880c"
 uuid = "0ac62f75-1d6f-5e53-bd7c-93b484bb37c0"
 version = "0.14.0+4"
 
+[[libblastrampoline_jll]]
+deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
+
 [[libfdk_aac_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
 git-tree-sha1 = "7a5780a0d9c6864184b3a2eeeb833a0c871f00ab"
@@ -1606,15 +1614,15 @@ version = "0.9.1+5"
 # ╟─90992888-fd0f-44af-bd61-f5f3d750b34b
 # ╟─650ae02b-4f7b-4afe-9f91-676e3ad2ab01
 # ╟─779730d8-557b-41fd-8b46-907ca744f46a
-# ╟─c8d1631a-ffe7-45ac-8223-040dcaa3039f
+# ╠═c8d1631a-ffe7-45ac-8223-040dcaa3039f
 # ╟─5fddbd14-b3c6-4c63-a459-b9ce8a3cab98
-# ╟─ea325591-a0cc-485d-8be6-4731f71e4a99
+# ╠═ea325591-a0cc-485d-8be6-4731f71e4a99
 # ╟─b9c1be88-783b-4873-a5f2-f91e415e9032
 # ╟─0c1165a8-34b2-4b7d-b3c6-b361865bbf02
 # ╟─72371695-0b7d-4db9-adef-69f71b5a6b05
-# ╟─1e3a3928-eccb-11eb-3acb-6f829eeca032
+# ╠═1e3a3928-eccb-11eb-3acb-6f829eeca032
 # ╟─8f8ddaa8-49bf-4d68-a75b-121d39ce0be2
-# ╟─e9a7f9d5-a12b-4a0d-b96c-6b791054c671
+# ╠═e9a7f9d5-a12b-4a0d-b96c-6b791054c671
 # ╟─42459023-cbf6-4f66-94a9-4fa0c917d658
 # ╟─92f66ca9-e53b-46e0-82c8-86101c96f1bf
 # ╟─cb2cc51a-cf1d-4369-b00a-c14057e33a61
