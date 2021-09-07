@@ -80,6 +80,24 @@ One cell at a time, for each of the three code cells below :
 4) analyze what's happened to the plot and workflow record
 """
 
+# ╔═╡ 1a9237f4-c1b4-49e1-b3a8-ba7a433cc313
+begin
+	lock1=false
+	#lock1=rerun1(exps[iexp]) #may take O(30sec)
+end
+
+# ╔═╡ 62bac52e-9f0f-4ee7-9da4-307326f74842
+begin
+	lock2=false
+	#lock2=rerun2(exps[iexp]) #may take O(10min)
+end
+
+# ╔═╡ 6f9c2d22-819b-4001-86cd-b33086a34db6
+begin
+	lock3=false
+	#lock3=rerun3(exps[iexp]) #may take O(10min)
+end
+
 # ╔═╡ c95673c6-7aea-4ce1-b135-91073749ea4c
 md"""## Appendices"""
 
@@ -163,12 +181,6 @@ function rerun3(myexp)
 	return true
 end
 
-# ╔═╡ 6f9c2d22-819b-4001-86cd-b33086a34db6
-begin
-	lock3=false
-	lock3=rerun3(exps[iexp]) #may take O(10min)
-end
-
 # ╔═╡ a4db0102-33fb-49c3-92f7-66dacb9d4e07
 function rerun2(myexp)
 	# change model run duration 
@@ -192,12 +204,6 @@ function rerun2(myexp)
 	git_log_fil(myexp,fil,"output file from run2")
 
 	return true
-end
-
-# ╔═╡ 62bac52e-9f0f-4ee7-9da4-307326f74842
-begin
-	lock2=false
-	lock2=rerun2(exps[iexp]) #may take O(10min)
 end
 
 # ╔═╡ db8cc4ec-28a6-4121-a1c0-62701aa4e9f8
@@ -260,12 +266,6 @@ function rerun1(myexp)
 
 	return true
 
-end
-
-# ╔═╡ 1a9237f4-c1b4-49e1-b3a8-ba7a433cc313
-begin
-	lock1=false
-	lock1=rerun1(exps[iexp]) #may take O(30sec)
 end
 
 # ╔═╡ a8263dde-4cde-4da1-8108-0135af254965
@@ -779,7 +779,7 @@ uuid = "38a345b3-de98-5d2b-a5d3-14cd9215e700"
 version = "2.36.0+0"
 
 [[LinearAlgebra]]
-deps = ["Libdl"]
+deps = ["Libdl", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Logging]]
@@ -883,6 +883,10 @@ deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
 git-tree-sha1 = "7937eda4681660b4d6aeeecc2f7e1c81c8ee4e2f"
 uuid = "e7412a2a-1a6e-54c0-be00-318e2571c051"
 version = "1.3.5+0"
+
+[[OpenBLAS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
+uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
 
 [[OpenSSL_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1319,6 +1323,10 @@ git-tree-sha1 = "acc685bcf777b2202a904cdcb49ad34c2fa1880c"
 uuid = "0ac62f75-1d6f-5e53-bd7c-93b484bb37c0"
 version = "0.14.0+4"
 
+[[libblastrampoline_jll]]
+deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
+
 [[libfdk_aac_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
 git-tree-sha1 = "7a5780a0d9c6864184b3a2eeeb833a0c871f00ab"
@@ -1376,7 +1384,7 @@ version = "0.9.1+5"
 # ╟─42a34a31-4b49-4d0e-81a7-6bde2b1f514d
 # ╟─f199ba18-ebe7-4d5d-b682-64969ef5ef92
 # ╟─7fa8a460-89d4-11eb-19bb-bbacdd32719a
-# ╟─1f3096d3-ca68-4a71-9411-fe3b201cf5a9
+# ╠═1f3096d3-ca68-4a71-9411-fe3b201cf5a9
 # ╟─8420675b-1a1b-4f3d-bf81-874ce4813a37
 # ╟─d90039c4-85a1-11eb-0d82-77db4decaa6e
 # ╟─31829f08-86d1-11eb-3e26-dfae038b4c01
@@ -1395,7 +1403,7 @@ version = "0.9.1+5"
 # ╟─8cf4d8ca-84eb-11eb-22d2-255ce7237090
 # ╠═0d2237c1-c26c-4f5b-86ca-4682a6ab2d8a
 # ╟─a4db0102-33fb-49c3-92f7-66dacb9d4e07
-# ╟─db8cc4ec-28a6-4121-a1c0-62701aa4e9f8
+# ╠═db8cc4ec-28a6-4121-a1c0-62701aa4e9f8
 # ╟─a8263dde-4cde-4da1-8108-0135af254965
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
