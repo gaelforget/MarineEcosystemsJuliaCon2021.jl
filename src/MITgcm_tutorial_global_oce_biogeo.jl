@@ -51,28 +51,28 @@ The model configuration can be summarized like this:
 # ╔═╡ d90039c4-85a1-11eb-0d82-77db4decaa6e
 md"""## Workflow Summary
 
-- the `setup` method will set up the run directory
-- the `build` method will compile the model (MITgcm)
-- the `launch` method will run the model (MITgcm)
+- the `setup` method sets up the run directory
+- the `build` method compiles the model (`migcmuv`)
+- the `launch` method runs the model
 
 """
 
 # ╔═╡ 3f58906b-4f50-4df6-84dd-56abe4c9a4c3
 md"""## Model Output 
 
-(is found in the `run/` directory)
+This is what's found in the `run/` directory:
 """
 
 # ╔═╡ 9d3d6dd1-d2f8-4a87-a89d-0f0752fc22fa
 md"""## Workflow Record
 
-(is found in the `log/` directory)
+This is what's been recorded in the `log/` directory:
 """
 
 # ╔═╡ cab5152e-3c4b-47ab-937a-f084323267c5
 md"""## Modify And Rerun
 
-One cell at a time, for each of the three code cells below : 
+As an exercise, you can try this. For each of the three code cells below, in order : 
 
 1) uncomment the function call (e.g. `lock1=rerun1(exps[iexp])`)
 2) run the code cell (i.e. click on the arrow at the bottom right of cell)
@@ -123,15 +123,15 @@ myexp
 # ╔═╡ 8420675b-1a1b-4f3d-bf81-874ce4813a37
 md"""
 
-The model will compile in a subfolder of `MITgcm` :
+The model is built / compiled in a subfolder of `MITgcm` :
 
 *$build_path*
 
-It will run in a temporary folder called :
+It is run in a temporary folder called :
 
 *$run_path*
 
-And the workflow will be recorded in :
+And the workflow is recorded in :
 
 *$log_path*
 
@@ -1785,9 +1785,9 @@ version = "1.4.1+1"
 # ╟─9d3d6dd1-d2f8-4a87-a89d-0f0752fc22fa
 # ╟─c53396cf-6225-4f17-9d57-613efaf3cd67
 # ╟─cab5152e-3c4b-47ab-937a-f084323267c5
-# ╟─1a9237f4-c1b4-49e1-b3a8-ba7a433cc313
-# ╟─62bac52e-9f0f-4ee7-9da4-307326f74842
-# ╟─6f9c2d22-819b-4001-86cd-b33086a34db6
+# ╠═1a9237f4-c1b4-49e1-b3a8-ba7a433cc313
+# ╠═62bac52e-9f0f-4ee7-9da4-307326f74842
+# ╠═6f9c2d22-819b-4001-86cd-b33086a34db6
 # ╟─c95673c6-7aea-4ce1-b135-91073749ea4c
 # ╟─f199ba18-ebe7-4d5d-b682-64969ef5ef92
 # ╟─8cf4d8ca-84eb-11eb-22d2-255ce7237090
